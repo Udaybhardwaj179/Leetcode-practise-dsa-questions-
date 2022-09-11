@@ -1,0 +1,25 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int arr[8]={4,3,2,2,4,4,4};
+int ans=0, f=0;
+map<int ,int > m;
+for(auto i:arr){
+    if (i%2==0){
+        m[i]++;
+    }
+}
+
+for(auto i:m){
+    cout<<i.first<<" "<<i.second<<endl;
+}
+for (auto i: m){
+    if (i.second>ans){
+    f=i.first;
+    ans=i.second;
+}
+
+}
+cout<<f;
+}   
