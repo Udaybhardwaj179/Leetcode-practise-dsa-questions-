@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+int j=1;
+int t;
+cin>>t;
+while(t--)
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    int m;
+    cin>>m;
+    int s=0;
+    for (int i=0;i<n;i++){
+        cin>>arr[i];
+        s=s+arr[i];
+    }
+    int l=s%m;
+    
+    cout<<"Case #"<<j<<": "<<l<<endl;
+    j++;
+    
+}
+}
