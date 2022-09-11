@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int partitionString(string s) {
+        int ans=1;
+        set<char> x;
+        for (auto c: s){
+             
+            if (x.count(c) == 1)
+            { 
+                x.clear();
+                ans++;
+            }
+             x.insert(c);
+        }
+        return ans;
+    }
+};
