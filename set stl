@@ -1,0 +1,31 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+set <string> s;
+s.insert ("abc");
+s.insert ("uday");
+s.insert("shubhanshu");
+
+
+// auto it=s.find("shubhanshu");
+// cout<<*it;
+
+
+// s.erase("abc");
+// for (auto x:s){
+//     cout<<x<<"  ";
+
+// }
+
+
+// if(s.count("abcf")){
+//     cout<<"yes";
+// }
+// else{
+//     cout<<"no";
+// }
+
+
+
+}   
