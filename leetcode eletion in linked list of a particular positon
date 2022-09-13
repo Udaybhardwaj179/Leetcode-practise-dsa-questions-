@@ -1,0 +1,70 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+struct node{
+    int data;
+    node*next;
+    node(int d){
+        data=d;
+        next=NULL;
+    }
+};
+void insertt(node *&tail, int d){
+    node *temp=new node(d);
+    tail->next=temp;
+    tail=temp;
+    
+    
+}
+void deletep(node*&head, int p){
+    if (p==1){
+        node* temp=head;
+        head=head->next;
+        delete temp;
+    }
+    
+    else{
+        node * curr=head;
+        node * prev=NULL;
+        int c=1;
+        while(c<p){
+            prev=curr;
+            curr=curr->next;
+            c++;
+        }
+        prev->next=curr->next;
+        delete curr;
+    }
+}
+void print(node *& head){
+    node*  temp=head;
+    while(temp!=NULL){
+        cout<<temp->data<<" ";
+        temp=temp->next;  
+    }
+}
+int main() {
+    int n;
+    cin>>n;
+    n=n-1;
+    int z;
+    cin>>z;
+   node* node1=new node (z);
+    node *head=node1;
+    node* tail=node1;
+    while(n--){
+        int x;
+        cin>>x;
+        insertt(tail, x);
+    }
+    int t;
+    cin>>t;
+    deletep(head,t);
+    print(head);
+        
+    return 0;
+}
